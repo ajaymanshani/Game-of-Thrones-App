@@ -1,0 +1,24 @@
+<div class="container">
+
+  <form>
+    <div class="form-group">
+      <label><h3>Search books by name:</h3></label>
+      <input type="text" [(ngModel)]="term" class="form-control" name="term" placeholder="Enter book name here">
+    </div>
+  </form>
+
+  <div *ngFor="let book of AllBooks | filter:term">
+    <ul class="list-group list-group-flush">
+
+      <li class="list-group-item">
+        <h1>
+          {{book.name}}
+        </h1>
+        <br>
+        <button type="button" class="btn btn-primary btn-md"><a [routerLink]="['/books',book.url.split('/').pop()]"> View Details </a></button>
+        <hr>
+      </li>
+
+    </ul>
+  </div>
+</div>

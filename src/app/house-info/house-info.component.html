@@ -1,0 +1,91 @@
+<div class="container">
+  <div *ngIf="currentHouse">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{ currentHouse.name }}</h2>
+
+        <div *ngIf="currentHouse.url">
+          <p>
+            <span class="title" class="font-weight-bold">URL: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.url }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.region">
+          <p>
+            <span class="title" class="font-weight-bold">Region: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.region }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.coatOfArms">
+          <p>
+            <span class="title" class="font-weight-bold">Coat of Arms: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.coatOfArms }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.words">
+          <p>
+            <span class="title" class="font-weight-bold">Words: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.words }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.titles[0]">
+          <p>
+            <span class="title" class="font-weight-bold">Title: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.titles[0] }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.seats[0]">
+          <p>
+            <span class="title" class="font-weight-bold">Seat: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.seats[0] }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.currentLord">
+          <p>
+            <span class="title" class="font-weight-bold">Lord: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.currentLord }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.heir">
+          <p>
+            <span class="title" class="font-weight-bold">Heir: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.heir }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.overlord">
+          <p>
+            <span class="title" class="font-weight-bold">Overlord: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.overlord }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.founded">
+          <p>
+            <span class="title" class="font-weight-bold">Founded: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.founded }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentHouse.founder">
+          <p>
+            <span class="title" class="font-weight-bold">Founder: </span>
+            <span class="detail" class="font-italic">{{ currentHouse.founder }}</span>
+          </p>
+        </div>
+
+        
+        <button type="button" class="btn btn-primary btn-md" (click)="goBack()">Go Back
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>

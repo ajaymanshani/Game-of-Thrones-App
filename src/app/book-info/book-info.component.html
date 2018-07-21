@@ -1,0 +1,69 @@
+<div class="container">
+  <div *ngIf="currentBook">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{ currentBook.name }}</h2>
+
+        <div *ngIf="currentBook.url">
+          <p>
+            <span class="title" class="font-weight-bold">URL: </span>
+            <span class="detail" class="font-italic">{{ currentBook.url }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentBook.isbn">
+          <p>
+            <span class="title" class="font-weight-bold">ISBN: </span>
+            <span class="detail" class="font-italic">{{ currentBook.isbn }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentBook.authors">
+          <p>
+            <span class="title" class="font-weight-bold">Authors: </span>
+            <span class="detail" class="font-italic">{{ currentBook.authors }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentBook.numberOfPages">
+          <p>
+            <span class="title" class="font-weight-bold">No. of pages: </span>
+            <span class="detail" class="font-italic">{{ currentBook.numberOfPages }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentBook.publisher">
+          <p>
+            <span class="title" class="font-weight-bold">Publisher: </span>
+            <span class="detail" class="font-italic">{{ currentBook.publisher }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentBook.country">
+          <p>
+            <span class="title" class="font-weight-bold">Country: </span>
+            <span class="detail" class="font-italic">{{ currentBook.country }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentBook.mediaType">
+          <p>
+            <span class="title" class="font-weight-bold">Media Type: </span>
+            <span class="detail" class="font-italic">{{ currentBook.mediaType }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentBook.released">
+          <p>
+            <span class="title" class="font-weight-bold">Released On: </span>
+            <span class="detail" class="font-italic">{{ currentBook.released | date}}</span>
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-md" (click)="goBack()">Go Back
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>

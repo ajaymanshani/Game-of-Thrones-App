@@ -1,0 +1,90 @@
+<div class="container">
+  <div *ngIf="currentCharacter">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{ currentCharacter.aliases }}</h2>
+
+        <div *ngIf="currentCharacter.name">
+          <p>
+            <span class="title" class="font-weight-bold">Name: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.name }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.url">
+          <p>
+            <span class="title" class="font-weight-bold">URL: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.url }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.gender">
+          <p>
+            <span class="title" class="font-weight-bold">Gender: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.gender }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.culture">
+          <p>
+            <span class="title" class="font-weight-bold">Culture: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.culture }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.born">
+          <p>
+            <span class="title" class="font-weight-bold">Born: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.born }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.died">
+          <p>
+            <span class="title" class="font-weight-bold">Died: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.died }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.titles[0]">
+          <p>
+            <span class="title" class="font-weight-bold">Title: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.titles[0] }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.father">
+          <p>
+            <span class="title" class="font-weight-bold">Father: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.father }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.mother">
+          <p>
+            <span class="title" class="font-weight-bold">Mother: </span>
+            <span class="detail" class="font-italic">{{ currentBook.mother }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.spouse">
+          <p>
+            <span class="title" class="font-weight-bold">Spouse: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.spouse }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="currentCharacter.playedBy[0]">
+          <p>
+            <span class="title" class="font-weight-bold">Played By: </span>
+            <span class="detail" class="font-italic">{{ currentCharacter.playedBy[0] }}</span>
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-md" (click)="goBack()">Go Back
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
